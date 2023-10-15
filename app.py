@@ -1,13 +1,12 @@
 import streamlit as st
+import os
+os.environ["OPENAI_KEY"] = st.secrets["OPENAI_KEY"]
 from langchain.document_loaders.csv_loader import CSVLoader
 from langchain.vectorstores import FAISS
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.prompts import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import LLMChain
-from dotenv import load_dotenv
-
-load_dotenv()
 
 ## vectorize the data and store in db 
 
