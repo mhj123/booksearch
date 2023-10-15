@@ -1,6 +1,6 @@
 import streamlit as st
 import os
-os.environ["OPENAI_KEY"] = st.secrets["OPENAI_KEY"]
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_KEY"]
 from langchain.document_loaders.csv_loader import CSVLoader
 from langchain.vectorstores import FAISS
 from langchain.embeddings.openai import OpenAIEmbeddings
