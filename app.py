@@ -63,13 +63,13 @@ def generate_response(message):
 # 5. Build an app with streamlit
 def main():
     st.set_page_config(
-        page_title="Customer response generator", page_icon=":bird:")
+        page_title="Book recommender", page_icon=":bird:")
 
-    st.header("Customer response generator :bird:")
-    message = st.text_area("customer message")
+    st.header("Book recommender :book:")
+    message = st.text_area("What type of book would you like to read?")
 
     if message:
-        st.write("Generating best practice message...")
+        st.write("Generating a recommendation...")
 
         result = generate_response(message)
 
